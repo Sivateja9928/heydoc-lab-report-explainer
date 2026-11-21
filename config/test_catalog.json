@@ -1,0 +1,156 @@
+{
+  "catalogue_notice": "Ranges are illustrative fixture values based on the cited material; they are not universal clinical standards. Preserve and use the exact range printed on each synthetic report.",
+  "panels": {
+    "cbc": ["hemoglobin", "rbc", "wbc", "platelets"],
+    "lipid_profile": ["total_cholesterol", "hdl", "ldl", "triglycerides"],
+    "hba1c": ["hba1c"],
+    "thyroid_profile": ["tsh", "t3", "free_t4"],
+    "liver_function": ["alt", "ast", "alp", "total_bilirubin"]
+  },
+  "tests": {
+    "hemoglobin": {
+      "canonical_name": "Hemoglobin",
+      "aliases": ["Hb", "Hgb", "Haemoglobin"],
+      "canonical_unit": "g/dL",
+      "unit_aliases": ["g/dL", "gm/dL", "g / dL"],
+      "illustrative_reference_range": "12.0 - 16.0",
+      "source": "https://medlineplus.gov/ency/article/003642.htm",
+      "source_note": "MedlinePlus adult female example; sex and other factors affect the applicable range."
+    },
+    "rbc": {
+      "canonical_name": "Red blood cell count",
+      "aliases": ["RBC", "Red Blood Cells", "Erythrocytes"],
+      "canonical_unit": "million/µL",
+      "unit_aliases": ["million/µL", "million/uL", "10^6/µL", "10^6/uL"],
+      "illustrative_reference_range": "4.2 - 5.4",
+      "source": "https://medlineplus.gov/ency/article/003642.htm",
+      "source_note": "MedlinePlus adult female example."
+    },
+    "wbc": {
+      "canonical_name": "White blood cell count",
+      "aliases": ["WBC", "White Blood Cells", "Leukocytes"],
+      "canonical_unit": "cells/\u00b5L",
+      "unit_aliases": ["cells/\u00b5L", "cells/uL", "cells/\u03bcL", "cells/mm3"],
+      "illustrative_reference_range": "4500 - 11000",
+      "source": "https://medlineplus.gov/ency/article/003642.htm",
+      "source_note": "General adult example from MedlinePlus."
+    },
+    "platelets": {
+      "canonical_name": "Platelet count",
+      "aliases": ["Platelets", "PLT", "Platelet Count"],
+      "canonical_unit": "10^9/L",
+      "unit_aliases": ["10^9/L", "x10^9/L", "10^3/µL", "10^3/uL", "K/µL"],
+      "illustrative_reference_range": "150 - 400",
+      "source": "https://medlineplus.gov/ency/article/003642.htm",
+      "source_note": "Common adult count interval, expressed as 10^9/L; source ranges vary by lab."
+    },
+    "total_cholesterol": {
+      "canonical_name": "Total cholesterol",
+      "aliases": ["Total Cholesterol", "Cholesterol, Total", "TC"],
+      "canonical_unit": "mg/dL",
+      "unit_aliases": ["mg/dL", "mg / dL"],
+      "illustrative_reference_range": "< 200",
+      "source": "https://medlineplus.gov/lab-tests/cholesterol-levels/",
+      "source_note": "General adult healthy-level criterion; intentionally one-sided."
+    },
+    "hdl": {
+      "canonical_name": "HDL cholesterol",
+      "aliases": ["HDL", "HDL-C", "HDL Cholesterol"],
+      "canonical_unit": "mg/dL",
+      "unit_aliases": ["mg/dL", "mg / dL"],
+      "illustrative_reference_range": ">= 50",
+      "source": "https://medlineplus.gov/lab-tests/cholesterol-levels/",
+      "source_note": "Adult female low-level criterion example; high HDL is not flagged HIGH. Intentionally one-sided."
+    },
+    "ldl": {
+      "canonical_name": "LDL cholesterol",
+      "aliases": ["LDL", "LDL-C", "LDL Cholesterol"],
+      "canonical_unit": "mg/dL",
+      "unit_aliases": ["mg/dL", "mg / dL"],
+      "illustrative_reference_range": "< 100",
+      "source": "https://medlineplus.gov/lab-tests/cholesterol-levels/",
+      "source_note": "General healthy-level example; individual targets depend on risk. Intentionally one-sided."
+    },
+    "triglycerides": {
+      "canonical_name": "Triglycerides",
+      "aliases": ["TG", "Triglyceride", "Triglycerides"],
+      "canonical_unit": "mg/dL",
+      "unit_aliases": ["mg/dL", "mg / dL"],
+      "illustrative_reference_range": "< 150",
+      "source": "https://medlineplus.gov/ency/article/007812.htm",
+      "source_note": "General adult example; intentionally one-sided."
+    },
+    "hba1c": {
+      "canonical_name": "Hemoglobin A1c",
+      "aliases": ["HbA1c", "A1C", "Glycated Hemoglobin"],
+      "canonical_unit": "%",
+      "unit_aliases": ["%", "percent"],
+      "illustrative_reference_range": "4.0 - 5.6",
+      "source": "https://wwwn.cdc.gov/nchs/data/nhanes/public/2021/labmethods/GHB-L-MET-Premier-508.pdf",
+      "source_note": "Method-specific CDC/NHANES reference range; not a universal diagnostic classification."
+    },
+    "tsh": {
+      "canonical_name": "Thyroid-stimulating hormone",
+      "aliases": ["TSH", "Thyrotropin"],
+      "canonical_unit": "µU/mL",
+      "unit_aliases": ["µU/mL", "uIU/mL", "mIU/L"],
+      "illustrative_reference_range": "0.4 - 4.8",
+      "source": "https://www.ucsfhealth.org/care/medical-tests/tsh-test",
+      "source_note": "General adult example; age, pregnancy, timing, and lab methods can change ranges."
+    },
+    "t3": {
+      "canonical_name": "Total triiodothyronine",
+      "aliases": ["T3", "Total T3", "Triiodothyronine"],
+      "canonical_unit": "ng/dL",
+      "unit_aliases": ["ng/dL", "ng / dL"],
+      "illustrative_reference_range": "78 - 158",
+      "source": "https://www.ucsfhealth.org/care/medical-tests/t3-test",
+      "source_note": "Total T3 adult example; the free T3 test has different units and ranges."
+    },
+    "free_t4": {
+      "canonical_name": "Free thyroxine",
+      "aliases": ["Free T4", "FT4", "T4 Free", "Free Thyroxine"],
+      "canonical_unit": "ng/dL",
+      "unit_aliases": ["ng/dL", "ng / dL"],
+      "illustrative_reference_range": "0.9 - 1.7",
+      "source": "https://www.mayocliniclabs.com/test-catalog/overview/36108",
+      "source_note": "Mayo adult example; use only as a synthetic fixture range."
+    },
+    "alt": {
+      "canonical_name": "Alanine aminotransferase",
+      "aliases": ["ALT", "SGPT", "Alanine Transaminase"],
+      "canonical_unit": "U/L",
+      "unit_aliases": ["U/L", "IU/L", "units/L"],
+      "illustrative_reference_range": "4 - 36",
+      "source": "https://www.medlineplus.gov/ency/article/003473.htm",
+      "source_note": "MedlinePlus example; ranges vary by laboratory."
+    },
+    "ast": {
+      "canonical_name": "Aspartate aminotransferase",
+      "aliases": ["AST", "SGOT", "Aspartate Transaminase"],
+      "canonical_unit": "U/L",
+      "unit_aliases": ["U/L", "IU/L", "units/L"],
+      "illustrative_reference_range": "8 - 33",
+      "source": "https://www.ucsfhealth.org/care/medical-tests/aspartate-aminotransferase-ast-blood-test",
+      "source_note": "UCSF example; ranges vary by laboratory."
+    },
+    "alp": {
+      "canonical_name": "Alkaline phosphatase",
+      "aliases": ["ALP", "Alk Phos", "Alkaline Phosphatase"],
+      "canonical_unit": "U/L",
+      "unit_aliases": ["U/L", "IU/L", "units/L"],
+      "illustrative_reference_range": "40 - 129",
+      "source": "https://www.ucsfhealth.org/care/medical-tests/alp-blood-test",
+      "source_note": "UCSF adult example; age and sex may affect ranges."
+    },
+    "total_bilirubin": {
+      "canonical_name": "Total bilirubin",
+      "aliases": ["Total Bilirubin", "Bilirubin, Total", "TBIL"],
+      "canonical_unit": "mg/dL",
+      "unit_aliases": ["mg/dL", "mg / dL"],
+      "illustrative_reference_range": "0.1 - 1.2",
+      "source": "https://www.ucsfhealth.org/care/medical-tests/bilirubin-blood-test",
+      "source_note": "UCSF example; ranges vary by lab and age."
+    }
+  }
+}

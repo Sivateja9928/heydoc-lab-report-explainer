@@ -1,0 +1,36 @@
+{
+  "policy_name": "Labcorp Critical (Panic) Limits demonstration subset",
+  "source_name": "Labcorp Critical (Panic) Values, dated 05/09/2025",
+  "source_url": "https://www.labcorp.com/content/dam/labcorp/files/test-menu/1486400_TL_Critical%28Panic%29Values050925_FINAL.pdf",
+  "overview_url": "https://www.labcorp.com/test-menu/resources/critical-values",
+  "notice": "Laboratory-specific demonstration policy only. The source says its limits are adult unless otherwise specified and that ordinary abnormal results are not critical values.",
+  "thresholds": [
+    {
+      "test_id": "hemoglobin",
+      "unit": "g/dL",
+      "age_group": ">15 years Male",
+      "low_threshold": 6.1,
+      "low_operator": "<",
+      "high_threshold": 21.4,
+      "high_operator": ">"
+    },
+    {
+      "test_id": "hemoglobin",
+      "unit": "g/dL",
+      "age_group": ">15 years Female",
+      "low_threshold": 6.1,
+      "low_operator": "<",
+      "high_threshold": 21.4,
+      "high_operator": ">"
+    },
+    {
+      "test_id": "total_bilirubin",
+      "unit": "mg/dL",
+      "age_group": "1 month and older to adults",
+      "low_threshold": null,
+      "low_operator": null,
+      "high_threshold": 17.0,
+      "high_operator": ">"
+    }
+  ]
+}

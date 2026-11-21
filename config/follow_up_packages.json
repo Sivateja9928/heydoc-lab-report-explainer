@@ -1,0 +1,21 @@
+{
+  "notice": "These package IDs are demo routing labels, not clinical orders or medical recommendations.",
+  "mappings": [
+    {"test_id":"hemoglobin","flags":["LOW"],"package_id":"CBC_FOLLOWUP"},
+    {"test_id":"rbc","flags":["LOW"],"package_id":"CBC_FOLLOWUP"},
+    {"test_id":"wbc","flags":["HIGH"],"package_id":"CBC_FOLLOWUP"},
+    {"test_id":"platelets","flags":["LOW","HIGH"],"package_id":"CBC_FOLLOWUP"},
+    {"test_id":"total_cholesterol","flags":["HIGH"],"package_id":"LIPID_FOLLOWUP"},
+    {"test_id":"ldl","flags":["HIGH"],"package_id":"LIPID_FOLLOWUP"},
+    {"test_id":"triglycerides","flags":["HIGH"],"package_id":"LIPID_FOLLOWUP"},
+    {"test_id":"hdl","flags":["LOW"],"package_id":"LIPID_FOLLOWUP"},
+    {"test_id":"hba1c","flags":["HIGH"],"package_id":"HBA1C_FOLLOWUP"},
+    {"test_id":"tsh","flags":["LOW","HIGH"],"package_id":"THYROID_FOLLOWUP"},
+    {"test_id":"t3","flags":["LOW","HIGH"],"package_id":"THYROID_FOLLOWUP"},
+    {"test_id":"free_t4","flags":["LOW","HIGH"],"package_id":"THYROID_FOLLOWUP"},
+    {"test_id":"alt","flags":["HIGH"],"package_id":"LFT_FOLLOWUP"},
+    {"test_id":"ast","flags":["HIGH"],"package_id":"LFT_FOLLOWUP"},
+    {"test_id":"alp","flags":["HIGH"],"package_id":"LFT_FOLLOWUP"},
+    {"test_id":"total_bilirubin","flags":["HIGH"],"package_id":"LFT_FOLLOWUP"}
+  ]
+}

@@ -1,0 +1,1350 @@
+{
+  "evaluation_mode": "offline",
+  "case_count": 30,
+  "metrics": {
+    "test_id": {
+      "correct": 30,
+      "denominator": 30,
+      "accuracy_percent": 100.0
+    },
+    "value_text": {
+      "correct": 30,
+      "denominator": 30,
+      "accuracy_percent": 100.0
+    },
+    "numeric_value": {
+      "correct": 30,
+      "denominator": 30,
+      "accuracy_percent": 100.0
+    },
+    "unit": {
+      "correct": 30,
+      "denominator": 30,
+      "accuracy_percent": 100.0
+    },
+    "reference_range": {
+      "correct": 30,
+      "denominator": 30,
+      "accuracy_percent": 100.0
+    },
+    "flag": {
+      "correct": 30,
+      "denominator": 30,
+      "accuracy_percent": 100.0
+    },
+    "evidence_grounding": {
+      "correct": 30,
+      "denominator": 30,
+      "accuracy_percent": 100.0
+    },
+    "unknown_handling": {
+      "correctly_unknown": 20,
+      "expected_unknown_cases": 20,
+      "accuracy_percent": 100.0,
+      "unexpected_unknown_in_classifiable_cases": 0,
+      "classifiable_case_denominator": 10
+    },
+    "missing_field_handling": {
+      "correct": 5,
+      "denominator": 5,
+      "accuracy_percent": 100.0
+    }
+  },
+  "latency_ms": {
+    "mean": 2.016,
+    "median": 1.373,
+    "p95": 6.418,
+    "denominator_reports": 30,
+    "per_report": {
+      "EVAL-001": 6.418,
+      "EVAL-002": 1.893,
+      "EVAL-003": 1.287,
+      "EVAL-004": 1.208,
+      "EVAL-005": 1.148,
+      "EVAL-006": 1.112,
+      "EVAL-007": 1.125,
+      "EVAL-008": 1.157,
+      "EVAL-009": 1.228,
+      "EVAL-010": 1.378,
+      "EVAL-011": 1.516,
+      "EVAL-012": 1.641,
+      "EVAL-013": 3.729,
+      "EVAL-014": 5.533,
+      "EVAL-015": 6.966,
+      "EVAL-016": 3.087,
+      "EVAL-017": 1.92,
+      "EVAL-018": 1.904,
+      "EVAL-019": 1.352,
+      "EVAL-020": 1.431,
+      "EVAL-021": 1.411,
+      "EVAL-022": 1.291,
+      "EVAL-023": 1.194,
+      "EVAL-024": 1.369,
+      "EVAL-025": 2.484,
+      "EVAL-026": 1.444,
+      "EVAL-027": 1.002,
+      "EVAL-028": 1.044,
+      "EVAL-029": 1.057,
+      "EVAL-030": 1.159
+    }
+  },
+  "failed_cases": [],
+  "cases": [
+    {
+      "case_id": "EVAL-001",
+      "panel": "cbc",
+      "scenario": "normal",
+      "expected": {
+        "test_id": "hemoglobin",
+        "value_text": "14.0",
+        "value": 14.0,
+        "unit": "g/dL",
+        "reference_range": "12.0 - 16.0",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "Hb | 14.0 | g/dL | 12.0 - 16.0"
+      },
+      "predicted": {
+        "test_id": "hemoglobin",
+        "test_name": "Hb",
+        "value_text": "14.0",
+        "value": 14.0,
+        "unit": "g/dL",
+        "reference_range": "12.0 - 16.0",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "Hb | 14.0 | g/dL | 12.0 - 16.0",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 6.418,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-002",
+      "panel": "cbc",
+      "scenario": "abnormal",
+      "expected": {
+        "test_id": "wbc",
+        "value_text": "12000",
+        "value": 12000.0,
+        "unit": "cells/uL",
+        "reference_range": "4500 - 11000",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "WBC | 12000 | cells/uL | 4500 - 11000"
+      },
+      "predicted": {
+        "test_id": "wbc",
+        "test_name": "WBC",
+        "value_text": "12000",
+        "value": 12000.0,
+        "unit": "cells/uL",
+        "reference_range": "4500 - 11000",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "WBC | 12000 | cells/uL | 4500 - 11000",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.893,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-003",
+      "panel": "cbc",
+      "scenario": "missing_field_unit",
+      "expected": {
+        "test_id": "hemoglobin",
+        "value_text": "14.0",
+        "value": 14.0,
+        "unit": null,
+        "reference_range": "12.0 - 16.0",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Hemoglobin | 14.0 | [unit not printed] | 12.0 - 16.0"
+      },
+      "predicted": {
+        "test_id": "hemoglobin",
+        "test_name": "Hemoglobin",
+        "value_text": "14.0",
+        "value": 14.0,
+        "unit": null,
+        "reference_range": "12.0 - 16.0",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Hemoglobin | 14.0 | [unit not printed] | 12.0 - 16.0",
+        "issues": [
+          "Missing unit."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true,
+        "missing_field_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.287,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-004",
+      "panel": "cbc",
+      "scenario": "malformed_row",
+      "expected": {
+        "test_id": "rbc",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "RBC result twelve million/uL range 4.2 - 5.4"
+      },
+      "predicted": {
+        "test_id": "rbc",
+        "test_name": "RBC result twelve million/uL range 4.2 - 5.4",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "RBC result twelve million/uL range 4.2 - 5.4",
+        "issues": [
+          "Missing result value.",
+          "Missing unit.",
+          "Missing reference range."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.208,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-005",
+      "panel": "cbc",
+      "scenario": "unsupported_unit",
+      "expected": {
+        "test_id": "platelets",
+        "value_text": "250",
+        "value": 250.0,
+        "unit": "bananas/L",
+        "reference_range": "150 - 400",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "PLT | 250 | bananas/L | 150 - 400"
+      },
+      "predicted": {
+        "test_id": "platelets",
+        "test_name": "PLT",
+        "value_text": "250",
+        "value": 250.0,
+        "unit": "bananas/L",
+        "reference_range": "150 - 400",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "PLT | 250 | bananas/L | 150 - 400",
+        "issues": [
+          "Unit is not a configured alias for this test."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.148,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-006",
+      "panel": "cbc",
+      "scenario": "ambiguous_range",
+      "expected": {
+        "test_id": "hemoglobin",
+        "value_text": "14.0",
+        "value": 14.0,
+        "unit": "g/dL",
+        "reference_range": "12.0 - 16.0 or 13.0 - 17.0",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Hb | 14.0 | g/dL | 12.0 - 16.0 or 13.0 - 17.0"
+      },
+      "predicted": {
+        "test_id": "hemoglobin",
+        "test_name": "Hb",
+        "value_text": "14.0",
+        "value": 14.0,
+        "unit": "g/dL",
+        "reference_range": "12.0 - 16.0 or 13.0 - 17.0",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Hb | 14.0 | g/dL | 12.0 - 16.0 or 13.0 - 17.0",
+        "issues": [
+          "Reference range is ambiguous or unsupported."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.112,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-007",
+      "panel": "lipid_profile",
+      "scenario": "normal_one_sided_range",
+      "expected": {
+        "test_id": "triglycerides",
+        "value_text": "120",
+        "value": 120.0,
+        "unit": "mg/dL",
+        "reference_range": "< 150",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "TG | 120 | mg/dL | < 150"
+      },
+      "predicted": {
+        "test_id": "triglycerides",
+        "test_name": "TG",
+        "value_text": "120",
+        "value": 120.0,
+        "unit": "mg/dL",
+        "reference_range": "< 150",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "TG | 120 | mg/dL | < 150",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.125,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-008",
+      "panel": "lipid_profile",
+      "scenario": "abnormal",
+      "expected": {
+        "test_id": "ldl",
+        "value_text": "130",
+        "value": 130.0,
+        "unit": "mg / dL",
+        "reference_range": "< 100",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "LDL-C | 130 | mg / dL | < 100"
+      },
+      "predicted": {
+        "test_id": "ldl",
+        "test_name": "LDL-C",
+        "value_text": "130",
+        "value": 130.0,
+        "unit": "mg / dL",
+        "reference_range": "< 100",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "LDL-C | 130 | mg / dL | < 100",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.157,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-009",
+      "panel": "lipid_profile",
+      "scenario": "missing_field_range",
+      "expected": {
+        "test_id": "hdl",
+        "value_text": "44",
+        "value": 44.0,
+        "unit": "mg/dL",
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "HDL | 44 | mg/dL | [range not printed]"
+      },
+      "predicted": {
+        "test_id": "hdl",
+        "test_name": "HDL",
+        "value_text": "44",
+        "value": 44.0,
+        "unit": "mg/dL",
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "HDL | 44 | mg/dL | [range not printed]",
+        "issues": [
+          "Missing reference range."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true,
+        "missing_field_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.228,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-010",
+      "panel": "lipid_profile",
+      "scenario": "malformed_row",
+      "expected": {
+        "test_id": "total_cholesterol",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "TC - not-a-number mg/dL"
+      },
+      "predicted": {
+        "test_id": "total_cholesterol",
+        "test_name": "TC - not-a-number mg/dL",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "TC - not-a-number mg/dL",
+        "issues": [
+          "Missing result value.",
+          "Missing unit.",
+          "Missing reference range."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.378,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-011",
+      "panel": "lipid_profile",
+      "scenario": "unsupported_unit",
+      "expected": {
+        "test_id": "ldl",
+        "value_text": "90",
+        "value": 90.0,
+        "unit": "mmol/dL",
+        "reference_range": "< 100",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "LDL | 90 | mmol/dL | < 100"
+      },
+      "predicted": {
+        "test_id": "ldl",
+        "test_name": "LDL",
+        "value_text": "90",
+        "value": 90.0,
+        "unit": "mmol/dL",
+        "reference_range": "< 100",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "LDL | 90 | mmol/dL | < 100",
+        "issues": [
+          "Unit is not a configured alias for this test."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.516,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-012",
+      "panel": "lipid_profile",
+      "scenario": "ambiguous_range",
+      "expected": {
+        "test_id": "triglycerides",
+        "value_text": "120",
+        "value": 120.0,
+        "unit": "mg/dL",
+        "reference_range": "<150 if fasting; <=200 otherwise",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "TG | 120 | mg/dL | <150 if fasting; <=200 otherwise"
+      },
+      "predicted": {
+        "test_id": "triglycerides",
+        "test_name": "TG",
+        "value_text": "120",
+        "value": 120.0,
+        "unit": "mg/dL",
+        "reference_range": "<150 if fasting; <=200 otherwise",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "TG | 120 | mg/dL | <150 if fasting; <=200 otherwise",
+        "issues": [
+          "Reference range is ambiguous or unsupported."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.641,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-013",
+      "panel": "hba1c",
+      "scenario": "normal",
+      "expected": {
+        "test_id": "hba1c",
+        "value_text": "5.2",
+        "value": 5.2,
+        "unit": "%",
+        "reference_range": "4.0 - 5.6",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "A1C | 5.2 | % | 4.0 - 5.6"
+      },
+      "predicted": {
+        "test_id": "hba1c",
+        "test_name": "A1C",
+        "value_text": "5.2",
+        "value": 5.2,
+        "unit": "%",
+        "reference_range": "4.0 - 5.6",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "A1C | 5.2 | % | 4.0 - 5.6",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 3.729,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-014",
+      "panel": "hba1c",
+      "scenario": "abnormal",
+      "expected": {
+        "test_id": "hba1c",
+        "value_text": "5.9",
+        "value": 5.9,
+        "unit": "percent",
+        "reference_range": "4.0 - 5.6",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "HbA1c | 5.9 | percent | 4.0 - 5.6"
+      },
+      "predicted": {
+        "test_id": "hba1c",
+        "test_name": "HbA1c",
+        "value_text": "5.9",
+        "value": 5.9,
+        "unit": "percent",
+        "reference_range": "4.0 - 5.6",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "HbA1c | 5.9 | percent | 4.0 - 5.6",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 5.533,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-015",
+      "panel": "hba1c",
+      "scenario": "missing_field_value",
+      "expected": {
+        "test_id": "hba1c",
+        "value_text": null,
+        "value": null,
+        "unit": "%",
+        "reference_range": "4.0 - 5.6",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "HbA1c | [not printed] | % | 4.0 - 5.6"
+      },
+      "predicted": {
+        "test_id": "hba1c",
+        "test_name": "HbA1c",
+        "value_text": null,
+        "value": null,
+        "unit": "%",
+        "reference_range": "4.0 - 5.6",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "HbA1c | [not printed] | % | 4.0 - 5.6",
+        "issues": [
+          "Missing result value."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true,
+        "missing_field_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 6.966,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-016",
+      "panel": "hba1c",
+      "scenario": "malformed_row",
+      "expected": {
+        "test_id": "hba1c",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Glycated Hemoglobin: five point two percent"
+      },
+      "predicted": {
+        "test_id": "hba1c",
+        "test_name": "Glycated Hemoglobin: five point two percent",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Glycated Hemoglobin: five point two percent",
+        "issues": [
+          "Missing result value.",
+          "Missing unit.",
+          "Missing reference range."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 3.087,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-017",
+      "panel": "hba1c",
+      "scenario": "unsupported_unit",
+      "expected": {
+        "test_id": "hba1c",
+        "value_text": "5.2",
+        "value": 5.2,
+        "unit": "fraction",
+        "reference_range": "4.0 - 5.6",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "A1C | 5.2 | fraction | 4.0 - 5.6"
+      },
+      "predicted": {
+        "test_id": "hba1c",
+        "test_name": "A1C",
+        "value_text": "5.2",
+        "value": 5.2,
+        "unit": "fraction",
+        "reference_range": "4.0 - 5.6",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "A1C | 5.2 | fraction | 4.0 - 5.6",
+        "issues": [
+          "Unit is not a configured alias for this test."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.92,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-018",
+      "panel": "hba1c",
+      "scenario": "ambiguous_range",
+      "expected": {
+        "test_id": "hba1c",
+        "value_text": "5.2",
+        "value": 5.2,
+        "unit": "%",
+        "reference_range": "4.0 - 5.6 (method-specific)",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "HbA1c | 5.2 | % | 4.0 - 5.6 (method-specific)"
+      },
+      "predicted": {
+        "test_id": "hba1c",
+        "test_name": "HbA1c",
+        "value_text": "5.2",
+        "value": 5.2,
+        "unit": "%",
+        "reference_range": "4.0 - 5.6 (method-specific)",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "HbA1c | 5.2 | % | 4.0 - 5.6 (method-specific)",
+        "issues": [
+          "Reference range is ambiguous or unsupported."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.904,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-019",
+      "panel": "thyroid_profile",
+      "scenario": "normal",
+      "expected": {
+        "test_id": "tsh",
+        "value_text": "2.0",
+        "value": 2.0,
+        "unit": "uIU/mL",
+        "reference_range": "0.4 - 4.8",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "TSH | 2.0 | uIU/mL | 0.4 - 4.8"
+      },
+      "predicted": {
+        "test_id": "tsh",
+        "test_name": "TSH",
+        "value_text": "2.0",
+        "value": 2.0,
+        "unit": "uIU/mL",
+        "reference_range": "0.4 - 4.8",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "TSH | 2.0 | uIU/mL | 0.4 - 4.8",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.352,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-020",
+      "panel": "thyroid_profile",
+      "scenario": "abnormal",
+      "expected": {
+        "test_id": "free_t4",
+        "value_text": "2.0",
+        "value": 2.0,
+        "unit": "ng/dL",
+        "reference_range": "0.9 - 1.7",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "Free T4 | 2.0 | ng/dL | 0.9 - 1.7"
+      },
+      "predicted": {
+        "test_id": "free_t4",
+        "test_name": "Free T4",
+        "value_text": "2.0",
+        "value": 2.0,
+        "unit": "ng/dL",
+        "reference_range": "0.9 - 1.7",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "Free T4 | 2.0 | ng/dL | 0.9 - 1.7",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.431,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-021",
+      "panel": "thyroid_profile",
+      "scenario": "missing_field_unit",
+      "expected": {
+        "test_id": "t3",
+        "value_text": "110",
+        "value": 110.0,
+        "unit": null,
+        "reference_range": "78 - 158",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "T3 | 110 | [unit not printed] | 78 - 158"
+      },
+      "predicted": {
+        "test_id": "t3",
+        "test_name": "T3",
+        "value_text": "110",
+        "value": 110.0,
+        "unit": null,
+        "reference_range": "78 - 158",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "T3 | 110 | [unit not printed] | 78 - 158",
+        "issues": [
+          "Missing unit."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true,
+        "missing_field_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.411,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-022",
+      "panel": "thyroid_profile",
+      "scenario": "malformed_row",
+      "expected": {
+        "test_id": "tsh",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Thyrotropin approx two"
+      },
+      "predicted": {
+        "test_id": "tsh",
+        "test_name": "Thyrotropin approx two",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Thyrotropin approx two",
+        "issues": [
+          "Missing result value.",
+          "Missing unit.",
+          "Missing reference range."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.291,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-023",
+      "panel": "thyroid_profile",
+      "scenario": "unsupported_unit",
+      "expected": {
+        "test_id": "tsh",
+        "value_text": "2.0",
+        "value": 2.0,
+        "unit": "ug/dL",
+        "reference_range": "0.4 - 4.8",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "TSH | 2.0 | ug/dL | 0.4 - 4.8"
+      },
+      "predicted": {
+        "test_id": "tsh",
+        "test_name": "TSH",
+        "value_text": "2.0",
+        "value": 2.0,
+        "unit": "ug/dL",
+        "reference_range": "0.4 - 4.8",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "TSH | 2.0 | ug/dL | 0.4 - 4.8",
+        "issues": [
+          "Unit is not a configured alias for this test."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.194,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-024",
+      "panel": "thyroid_profile",
+      "scenario": "ambiguous_range",
+      "expected": {
+        "test_id": "free_t4",
+        "value_text": "1.1",
+        "value": 1.1,
+        "unit": "ng/dL",
+        "reference_range": "age-specific range; see note",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "FT4 | 1.1 | ng/dL | age-specific range; see note"
+      },
+      "predicted": {
+        "test_id": "free_t4",
+        "test_name": "FT4",
+        "value_text": "1.1",
+        "value": 1.1,
+        "unit": "ng/dL",
+        "reference_range": "age-specific range; see note",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "FT4 | 1.1 | ng/dL | age-specific range; see note",
+        "issues": [
+          "Reference range is ambiguous or unsupported."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.369,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-025",
+      "panel": "liver_function",
+      "scenario": "normal",
+      "expected": {
+        "test_id": "alt",
+        "value_text": "20",
+        "value": 20.0,
+        "unit": "U/L",
+        "reference_range": "4 - 36",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "ALT | 20 | U/L | 4 - 36"
+      },
+      "predicted": {
+        "test_id": "alt",
+        "test_name": "ALT",
+        "value_text": "20",
+        "value": 20.0,
+        "unit": "U/L",
+        "reference_range": "4 - 36",
+        "flag": "NORMAL",
+        "source_page": 1,
+        "source_excerpt": "ALT | 20 | U/L | 4 - 36",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 2.484,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-026",
+      "panel": "liver_function",
+      "scenario": "abnormal",
+      "expected": {
+        "test_id": "alt",
+        "value_text": "50",
+        "value": 50.0,
+        "unit": "IU/L",
+        "reference_range": "4 - 36",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "SGPT | 50 | IU/L | 4 - 36"
+      },
+      "predicted": {
+        "test_id": "alt",
+        "test_name": "SGPT",
+        "value_text": "50",
+        "value": 50.0,
+        "unit": "IU/L",
+        "reference_range": "4 - 36",
+        "flag": "HIGH",
+        "source_page": 1,
+        "source_excerpt": "SGPT | 50 | IU/L | 4 - 36",
+        "issues": []
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.444,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-027",
+      "panel": "liver_function",
+      "scenario": "missing_field_value",
+      "expected": {
+        "test_id": "ast",
+        "value_text": null,
+        "value": null,
+        "unit": "U/L",
+        "reference_range": "8 - 33",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "AST | [not printed] | U/L | 8 - 33"
+      },
+      "predicted": {
+        "test_id": "ast",
+        "test_name": "AST",
+        "value_text": null,
+        "value": null,
+        "unit": "U/L",
+        "reference_range": "8 - 33",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "AST | [not printed] | U/L | 8 - 33",
+        "issues": [
+          "Missing result value."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true,
+        "missing_field_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.002,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-028",
+      "panel": "liver_function",
+      "scenario": "malformed_row",
+      "expected": {
+        "test_id": "alp",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Alk Phos maybe eighty"
+      },
+      "predicted": {
+        "test_id": "alp",
+        "test_name": "Alk Phos maybe eighty",
+        "value_text": null,
+        "value": null,
+        "unit": null,
+        "reference_range": null,
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "Alk Phos maybe eighty",
+        "issues": [
+          "Missing result value.",
+          "Missing unit.",
+          "Missing reference range."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.044,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-029",
+      "panel": "liver_function",
+      "scenario": "unsupported_unit",
+      "expected": {
+        "test_id": "total_bilirubin",
+        "value_text": "0.7",
+        "value": 0.7,
+        "unit": "mmol/L",
+        "reference_range": "0.1 - 1.2",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "TBIL | 0.7 | mmol/L | 0.1 - 1.2"
+      },
+      "predicted": {
+        "test_id": "total_bilirubin",
+        "test_name": "TBIL",
+        "value_text": "0.7",
+        "value": 0.7,
+        "unit": "mmol/L",
+        "reference_range": "0.1 - 1.2",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "TBIL | 0.7 | mmol/L | 0.1 - 1.2",
+        "issues": [
+          "Unit is not a configured alias for this test."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.057,
+      "extraction_error": null
+    },
+    {
+      "case_id": "EVAL-030",
+      "panel": "liver_function",
+      "scenario": "ambiguous_range",
+      "expected": {
+        "test_id": "ast",
+        "value_text": "25",
+        "value": 25.0,
+        "unit": "U/L",
+        "reference_range": "8 - 33 or 10 - 40 depending method",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "AST | 25 | U/L | 8 - 33 or 10 - 40 depending method"
+      },
+      "predicted": {
+        "test_id": "ast",
+        "test_name": "AST",
+        "value_text": "25",
+        "value": 25.0,
+        "unit": "U/L",
+        "reference_range": "8 - 33 or 10 - 40 depending method",
+        "flag": "UNKNOWN",
+        "source_page": 1,
+        "source_excerpt": "AST | 25 | U/L | 8 - 33 or 10 - 40 depending method",
+        "issues": [
+          "Reference range is ambiguous or unsupported."
+        ]
+      },
+      "checks": {
+        "test_id": true,
+        "value_text": true,
+        "numeric_value": true,
+        "unit": true,
+        "reference_range": true,
+        "flag": true,
+        "evidence_grounding": true,
+        "unknown_handling": true
+      },
+      "failed_fields": [],
+      "latency_ms": 1.159,
+      "extraction_error": null
+    }
+  ],
+  "clinical_validity": "Not evaluated; all reports are synthetic software fixtures."
+}

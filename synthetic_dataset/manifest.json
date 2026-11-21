@@ -1,0 +1,109 @@
+{
+  "reports": [
+    {
+      "report_id": "DEMO-CBC-01",
+      "panel": "cbc",
+      "scenario": "normal",
+      "pdf": "reports/demo_cbc_01.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-CBC-01"
+    },
+    {
+      "report_id": "DEMO-CBC-02",
+      "panel": "cbc",
+      "scenario": "abnormal",
+      "pdf": "reports/demo_cbc_02.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-CBC-02"
+    },
+    {
+      "report_id": "DEMO-CBC-03",
+      "panel": "cbc",
+      "scenario": "noisy_missing_unit_and_test",
+      "pdf": "reports/demo_cbc_03.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-CBC-03"
+    },
+    {
+      "report_id": "DEMO-LIPID-01",
+      "panel": "lipid_profile",
+      "scenario": "normal",
+      "pdf": "reports/demo_lipid_01.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-LIPID-01"
+    },
+    {
+      "report_id": "DEMO-LIPID-02",
+      "panel": "lipid_profile",
+      "scenario": "abnormal",
+      "pdf": "reports/demo_lipid_02.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-LIPID-02"
+    },
+    {
+      "report_id": "DEMO-LIPID-03",
+      "panel": "lipid_profile",
+      "scenario": "noisy_ambiguous_range_and_missing_test",
+      "pdf": "reports/demo_lipid_03.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-LIPID-03"
+    },
+    {
+      "report_id": "DEMO-HBA1C-01",
+      "panel": "hba1c",
+      "scenario": "normal",
+      "pdf": "reports/demo_hba1c_01.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-HBA1C-01"
+    },
+    {
+      "report_id": "DEMO-HBA1C-02",
+      "panel": "hba1c",
+      "scenario": "abnormal",
+      "pdf": "reports/demo_hba1c_02.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-HBA1C-02"
+    },
+    {
+      "report_id": "DEMO-HBA1C-03",
+      "panel": "hba1c",
+      "scenario": "noisy_qualified_value",
+      "pdf": "reports/demo_hba1c_03.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-HBA1C-03"
+    },
+    {
+      "report_id": "DEMO-THYROID-01",
+      "panel": "thyroid_profile",
+      "scenario": "normal",
+      "pdf": "reports/demo_thyroid_01.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-THYROID-01"
+    },
+    {
+      "report_id": "DEMO-THYROID-02",
+      "panel": "thyroid_profile",
+      "scenario": "abnormal",
+      "pdf": "reports/demo_thyroid_02.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-THYROID-02"
+    },
+    {
+      "report_id": "DEMO-THYROID-03",
+      "panel": "thyroid_profile",
+      "scenario": "noisy_missing_unit_and_ambiguous_range",
+      "pdf": "reports/demo_thyroid_03.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-THYROID-03"
+    },
+    {
+      "report_id": "DEMO-LFT-01",
+      "panel": "liver_function",
+      "scenario": "normal",
+      "pdf": "reports/demo_lft_01.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-LFT-01"
+    },
+    {
+      "report_id": "DEMO-LFT-02",
+      "panel": "liver_function",
+      "scenario": "abnormal",
+      "pdf": "reports/demo_lft_02.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-LFT-02"
+    },
+    {
+      "report_id": "DEMO-LFT-03",
+      "panel": "liver_function",
+      "scenario": "noisy_missing_value",
+      "pdf": "reports/demo_lft_03.pdf",
+      "ground_truth_ref": "ground_truth.json#/DEMO-LFT-03"
+    }
+  ]
+}

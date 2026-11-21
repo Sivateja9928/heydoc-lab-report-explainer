@@ -1,0 +1,45 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local environment variables and credentials
+.env
+.env.*
+!.env.example
+.adk/
+.secrets/
+secrets/
+*.secret
+*.pem
+*.key
+service-account*.json
+google-credentials*.json
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.vs/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local logs and temporary files
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
